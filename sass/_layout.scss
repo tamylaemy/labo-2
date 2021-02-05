@@ -1,0 +1,128 @@
+* {
+    margin : 0;
+    padding :0;
+}
+
+body {
+    width : 100vw;
+    height : 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    // background-color: rgb(179, 179, 204);
+    background-color: #fff;
+
+}
+
+
+body::after {
+    content : "";
+    clip-path: polygon(0 0, 80% 0 , 50% 100% , 0 100%);
+    //background-color: rgb(43, 71, 233);
+    background-color: couleur(primaire);
+    position: absolute;
+    width : 100%;
+    height : 100%;
+    top : 0;
+    bottom :0;
+    left :0;
+    right : 0;
+    z-index: -1;
+}
+
+h1{font-size:4rem ;}
+h2{font-size:3rem ;}
+h3{font-size:2rem ;}
+h4{font-size:1rem ;}
+h5{font-size:.8rem ;}
+h6{font-size: .7rem ;}
+p {
+    font-size: .6rem;
+}
+
+.bloc {
+    border : 1px solid #666;
+    background-color:transparent;
+    color :wheat;
+    font-size: 3rem;
+    margin-left : 0;
+    display : flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.bloc img {
+    width : 100px;
+    height : 100px;
+    display: block;
+    border-radius :50%;
+    margin-right : 15px;
+}
+
+.grille {
+    display : grid;
+    width: 80%;
+    margin : 0 auto;
+    grid-gap : 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-template-areas: 
+        "entete entete entete"
+        "menu menu menu"
+        "annonce1 annonce1 annonce1"
+        "principal principal principal"
+        "pied-page pied-page pied-page";
+        @include desktop    
+        {
+        grid-template-areas: 
+            "entete entete entete"
+            "menu menu menu"
+            "principal annonce1 annonce1"
+            "pied-page pied-page pied-page";
+        }
+}
+
+.entete{
+    grid-area: entete;
+
+}
+
+.menu{
+    grid-area: menu;
+
+}
+.annonce1{
+    grid-area: annonce1;
+    background-color: #efebc5;
+    color: #5e6e81;
+    border-radius: 10px;
+    box-shadow: 7px 3px 11px 4px #757472;
+    padding: 42px;
+    margin: 20px;
+    div{
+        font-size: .4em;
+        display:flex;
+        align-items: center;
+        }
+    }
+
+.annonce2{
+    padding: 42px;
+    margin: 20px;
+    background-color: #efebc5;
+    color: #1c2127;
+    grid-area: annonce2;
+    section {
+        display : flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+}
+.principal{
+    display : grid;
+    place-items: center;
+    grid-area: principal;
+}
+.pied-page{
+    grid-area: pied-page;
+}
