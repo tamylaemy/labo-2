@@ -12,9 +12,24 @@
 <body>
     <section class="grille">
         <header class="bloc entete">
-            <h1>Entête</h1>
+            <h1>TIM</h1>
         </header>
-        <nav class="bloc menu"><h4>Menu</h4></nav>
+      <!-- <nav class="bloc menu"><h4>Menu</h4></nav> --> 
+
+        <section class=" menu">
+            <input type="checkbox" id="chkburger">
+            <label for="chkburger" id="menuB">
+                <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu-alt-1&color=000000" width="40" height="40">
+            </label>
+            <nav>
+                <a href="#"><img src="https://s2.svgbox.net/hero-outline.svg?ic=moon&color=e6e6fa" width="32" height="32" id="lune"></a>
+                <a href="#"><img src="https://s2.svgbox.net/hero-outline.svg?ic=sun&color=e6e6fa" width="32" height="32" id="soleil"></a>
+                <a href="#"><img src="https://s2.svgbox.net/hero-outline.svg?ic=wifi&color=e6e6fa" width="32" height="32" id="wifi"></a>
+                <a href="#"><img src="https://s2.svgbox.net/hero-outline.svg?ic=mail&color=e6e6fa" width="32" height="32" id="mail"></a>
+                <a href="#"><img src="https://s2.svgbox.net/hero-outline.svg?ic=library&color=e6e6fa" width="32" height="32" id="admin"></a>
+            </nav>
+    
+        </section>
         <sidebar class="bloc annonce1">
            Annonce #1
           <section>
@@ -45,7 +60,8 @@
         </main>
 
         <footer class="bloc pied-page">
-            Pied de page
+            <h5>4w4 - Conception d'Interface et Développement Web</h5>
+            <h5>par Tamyla Ait-Chellouche</h5>
         </footer>
     </section>
 </body>
@@ -103,6 +119,74 @@
     ferme.addEventListener('mouseleave', function(){
             ferme.style.backgroundColor = "#efebc5"
             resteDuPolygone.style.backgroundColor = "#fff"
+    })
+
+/*----------------------------------------------------
+Menu burger 
+------------------------------------------------------ */
+let menuOuvert = false
+    let menu = document.getElementById('menuB')
+    let lune = document.getElementById('lune')
+    let soleil = document.getElementById('soleil')
+    let wifi = document.getElementById('wifi')
+    let mail = document.getElementById('mail')
+    let admin = document.getElementById('admin')
+
+    menu.addEventListener('mousedown', function(){
+        if (menuOuvert == false) {
+            menu.style.transitionDelay = ".1s"
+            menu.style.transitionTimingFunction = "ease-in"
+            menu.style.borderRadius = "5rem 0 0 5rem"
+
+            // Icon de la lune
+            lune.style.transitionDelay = ".4s"
+            lune.style.opacity = "1"
+
+            // Icon du soleil
+            soleil.style.transitionDelay = ".5s"
+            soleil.style.opacity = "1"
+
+            // Icon du wifi
+            wifi.style.transitionDelay = ".6s"
+            wifi.style.opacity = "1"
+
+            // Icon du mail
+            mail.style.transitionDelay = ".7s"
+            mail.style.opacity = "1"
+
+            // Icon du admin
+            admin.style.transitionDelay = ".9s"
+            admin.style.opacity = "1"
+
+            menuOuvert = true
+        }
+
+        else {
+            menu.style.transitionDelay = "1.12s"
+            menu.style.borderRadius = "5rem"
+
+            // Icon de la lune
+            lune.style.transitionDelay = ".7s"
+            lune.style.opacity = "0"
+
+            // Icon du soleil
+            soleil.style.transitionDelay = ".5s"
+            soleil.style.opacity = "0"
+
+            // Icon du wifi
+            wifi.style.transitionDelay = ".3s"
+            wifi.style.opacity = "0"
+
+            // Icon du mail
+            mail.style.transitionDelay = ".2s"
+            mail.style.opacity = "0"
+
+            // Icon du admin
+            admin.style.transitionDelay = ".1s"
+            admin.style.opacity = "0"
+
+            menuOuvert = false
+        }
     })
 
 
