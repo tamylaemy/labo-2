@@ -2,13 +2,84 @@
 Variables
 ------------------------------------------------- */
 /* --------------------------------------------------
-Mixin
+Mixins
 ----------------------------------------------- */
 /* --------------------------------------------------
 Animation
 ------------------------------------------------- */
+/* -------------------------------
+ANIMATION DE LA SECTION .PRINCIPAL
+---------------------------------- */
+.principal h3:nth-of-type(1) {
+  animation: anim-1 1s 0.5s both;
+}
+
+.principal h3:nth-of-type(2) {
+  animation: anim-2 1s 1s both;
+}
+
+.principal h3:nth-of-type(3) {
+  animation: anim-3 1s 1.5s both;
+}
+
+.principal h3:nth-of-type(4) {
+  animation: anim-4 1s 2s both;
+}
+
+.principal h3:nth-of-type(5) {
+  animation: anim-5 1s 2.5s both;
+}
+
+@keyframes anim-1 {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes anim-2 {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes anim-3 {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes anim-4 {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+@keyframes anim-5 {
+  0% {
+    transform: translateY(500px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* ----------------------------------------------
+ANIMATION DE LA PAGE D'ACCEUIL ( ANNONCE + BODY )
+------------------------------------------------- */
 body {
-  animation: anim-couleur-polygone 35s ease-in;
+  animation: anim-couleur-polygone 35s ease-in infinite;
 }
 
 @keyframes anim-couleur-polygone {
@@ -199,6 +270,17 @@ p {
 
 .annonce1 {
   grid-area: annonce1;
+}
+
+.principal {
+  grid-area: principal;
+}
+
+.pied-page {
+  grid-area: pied-page;
+}
+
+.annonce1 {
   background-color: #efebc5;
   color: #5e6e81;
   border-radius: 10px;
@@ -228,12 +310,13 @@ p {
 }
 
 .principal {
-  display: grid;
-  place-items: center;
-  grid-area: principal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.pied-page {
-  grid-area: pied-page;
+.principal h3 {
+  padding: 1.3rem 0 1.3rem 0;
 }
 /*# sourceMappingURL=style.css.map */

@@ -89,7 +89,18 @@ p {
 
 }
 .annonce1{
-    grid-area: annonce1;
+    grid-area: annonce1; 
+}
+
+.principal{
+    grid-area: principal;
+}
+
+.pied-page{
+    grid-area: pied-page;
+}
+
+.annonce1{    
     background-color: #efebc5;
     color: #5e6e81;
     border-radius: 10px;
@@ -117,10 +128,11 @@ p {
 
 }
 .principal{
-    display : grid;
-    place-items: center;
-    grid-area: principal;
-}
-.pied-page{
-    grid-area: pied-page;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        padding: 1.3rem 0 1.3rem 0;
+    }
 }

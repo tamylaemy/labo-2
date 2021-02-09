@@ -1,6 +1,45 @@
+/* -------------------------------
+ANIMATION DE LA SECTION .PRINCIPAL
+---------------------------------- */
+$columns: 5;
+@for $i from 1 through $columns {
+  .principal h3:nth-of-type(#{$i}) {
+    animation: anim-#{$i} 1s .5*($i#{s}) both;
+  }
+}
 
+@keyframes anim-1 {
+    0%{transform: translateY(-500px);}
+    100%{transform: translate(0);}
+}
+
+@keyframes anim-2 {
+    0%{transform: translateY(-500px);}
+    100%{transform: translate(0);}
+}
+
+@keyframes anim-3 {
+    0%{transform: translateY(-500px);}
+    100%{transform: translate(0);}
+}
+
+@keyframes anim-4 {
+    0%{transform: translateY(-500px);}
+    100%{transform: translate(0);}
+}
+
+@keyframes anim-5 {
+    0%{transform: translateY(500px);}
+    100%{transform: translate(0);}
+}
+
+/* ----------------------------------------------
+ANIMATION DE LA PAGE D'ACCEUIL ( ANNONCE + BODY )
+------------------------------------------------- */
+
+// animation couleur du reste du fond (synchro avec les animations d'annonces)
 body {
-    animation: anim-couleur-polygone 35s ease-in;
+    animation: anim-couleur-polygone 35s ease-in infinite;
 }
 
 @keyframes anim-couleur-polygone {
@@ -11,6 +50,7 @@ body {
     100%{background-color: couleur(ferme_fond);}
 }
 
+// animation couleur du fond des annonces individuelles
 #burger {
     animation: anim-couleur-burger 5s ease-in;
     animation-delay: 5s;
