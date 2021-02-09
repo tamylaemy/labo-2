@@ -10,23 +10,23 @@ Animation
 /* -------------------------------
 ANIMATION DE LA SECTION .PRINCIPAL
 ---------------------------------- */
-.principal h3:nth-of-type(1) {
+.principal h2:nth-of-type(1) {
   animation: anim-1 1s 0.5s both;
 }
 
-.principal h3:nth-of-type(2) {
+.principal h2:nth-of-type(2) {
   animation: anim-2 1s 1s both;
 }
 
-.principal h3:nth-of-type(3) {
+.principal h2:nth-of-type(3) {
   animation: anim-3 1s 1.5s both;
 }
 
-.principal h3:nth-of-type(4) {
+.principal h2:nth-of-type(4) {
   animation: anim-4 1s 2s both;
 }
 
-.principal h3:nth-of-type(5) {
+.principal h2:nth-of-type(5) {
   animation: anim-5 1s 2.5s both;
 }
 
@@ -187,7 +187,7 @@ body {
 body::after {
   content: "";
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-  background-color: #e6e6fa;
+  background-color: lavender;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -199,7 +199,7 @@ body::after {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 h2 {
@@ -227,7 +227,6 @@ p {
 }
 
 .bloc {
-  border: 1px solid #666;
   background-color: transparent;
   color: black;
   font-size: 3rem;
@@ -250,13 +249,13 @@ p {
   width: 80%;
   margin: 0 auto;
   grid-gap: 20px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "entete entete entete" "menu menu menu" "annonce1 annonce1 annonce1" "principal principal principal" "pied-page pied-page pied-page";
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+  grid-template-areas: "menu menu menu" "entete entete entete" "principal principal principal" "annonce1 annonce1 annonce1" "pied-page pied-page pied-page";
 }
 
 @media (min-width: 1000px) {
   .grille {
-    grid-template-areas: "entete entete entete" "menu menu menu" "principal annonce1 annonce1" "pied-page pied-page pied-page";
+    grid-template-areas: "menu menu menu menu"  "entete entete entete entete" "principal principal annonce1 annonce1" "pied-page pied-page pied-page pied-page";
   }
 }
 
@@ -280,6 +279,11 @@ p {
   grid-area: pied-page;
 }
 
+.entete {
+  display: flex;
+  align-items: center;
+}
+
 .annonce1 {
   background-color: #efebc5;
   color: #5e6e81;
@@ -295,20 +299,19 @@ p {
   align-items: center;
 }
 
-.annonce2 {
-  padding: 42px;
-  margin: 20px;
-  background-color: #efebc5;
-  color: #1c2127;
-  grid-area: annonce2;
-}
+/* .annonce2{
+    padding: 42px;
+    margin: 20px;
+    background-color: #efebc5;
+    color: #1c2127;
+    grid-area: annonce2;
+    section {
+        display : flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 
-.annonce2 section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
+} */
 .principal {
   display: flex;
   flex-direction: column;
@@ -316,15 +319,23 @@ p {
   align-items: center;
 }
 
-.principal h3 {
+.principal h2 {
   padding: 1.3rem 0 1.3rem 0;
+}
+
+.pied-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 /* --------------------------------------------------
 Menu
 ------------------------------------------------- */
 #menuB {
-  background-color: #e6e6fa;
+  background-color: lavender;
   border-radius: 5rem;
   padding: 1.2rem;
 }
@@ -359,14 +370,14 @@ Menu
   padding: .5rem;
 }
 
-.menu nav a:hover {
-  background-color: #858c8e;
-  border-radius: 50px 50px;
-}
-
 .menu nav #lune {
   transition: opacity .4s;
   opacity: 1;
+}
+
+.menu nav .lune:hover {
+  background-color: #ddb1b8;
+  border-radius: 50px 50px;
 }
 
 .menu nav #soleil {
@@ -374,9 +385,19 @@ Menu
   opacity: 1;
 }
 
+.menu nav .soleil:hover {
+  background-color: #b2cea6;
+  border-radius: 50px 50px;
+}
+
 .menu nav #wifi {
   transition: opacity .6s;
   opacity: 1;
+}
+
+.menu nav .wifi:hover {
+  background-color: #99b6bb;
+  border-radius: 50px 50px;
 }
 
 .menu nav #mail {
@@ -384,9 +405,19 @@ Menu
   opacity: 1;
 }
 
+.menu nav .mail:hover {
+  background-color: #d4bba0;
+  border-radius: 50px 50px;
+}
+
 .menu nav #admin {
   transition: opacity .9s;
   opacity: 1;
+}
+
+.menu nav .admin:hover {
+  background-color: #e0dcb2;
+  border-radius: 50px 50px;
 }
 
 label img {

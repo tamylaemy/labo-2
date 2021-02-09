@@ -8,7 +8,13 @@ $couleurs : (
     ville_fond : #bff8a5,
     virus_fond : #baeef7,
     ferme_fond : #f5cea5,
-    commun_fond : #efebc5
+    commun_fond : #efebc5,
+    
+    lune_fond : #ddb1b8,
+    soleil_fond : #b2cea6,
+    wifi_fond : #99b6bb,
+    mail_fond : #d4bba0,
+    admin_fond : #e0dcb2
     );
 
 @function couleur($propriete){

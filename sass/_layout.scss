@@ -10,6 +10,7 @@ body {
     font-size: 12px;
     // background-color: rgb(179, 179, 204);
     background-color: #fff;
+
 }
 
 body::after {
@@ -30,7 +31,7 @@ body::after {
     z-index: -1;
 }
 
-h1{font-size:4rem ;}
+h1{font-size:6rem ;}
 h2{font-size:3rem ;}
 h3{font-size:2rem ;}
 h4{font-size:1rem ;}
@@ -41,7 +42,6 @@ p {
 }
 
 .bloc {
-    border : 1px solid #666;
     background-color:transparent;
     color :black;
     font-size: 3rem;
@@ -64,21 +64,22 @@ p {
     width: 80%;
     margin : 0 auto;
     grid-gap : 20px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 2fr;
 
     grid-template-areas: 
-        "entete entete entete"
         "menu menu menu"
-        "annonce1 annonce1 annonce1"
+        "entete entete entete"
         "principal principal principal"
+        "annonce1 annonce1 annonce1"
         "pied-page pied-page pied-page";
+
         @include desktop    
         {
-        grid-template-areas: 
-            "entete entete entete"
-            "menu menu menu"
-            "principal annonce1 annonce1"
-            "pied-page pied-page pied-page";
+        grid-template-areas:
+            "menu menu menu menu" 
+            "entete entete entete entete"
+            "principal principal annonce1 annonce1"
+            "pied-page pied-page pied-page pied-page";
         }
 }
 
@@ -102,6 +103,11 @@ p {
     grid-area: pied-page;
 }
 
+.entete{
+    display: flex;
+    align-items: center;
+}
+
 .annonce1{    
     background-color: #efebc5;
     color: #5e6e81;
@@ -116,7 +122,7 @@ p {
         }
     }
 
-.annonce2{
+/* .annonce2{
     padding: 42px;
     margin: 20px;
     background-color: #efebc5;
@@ -128,13 +134,22 @@ p {
         justify-content: space-around;
     }
 
-}
+} */
+
 .principal{
     display : flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    h3 {
+    h2 {
         padding: 1.3rem 0 1.3rem 0;
     }
+}
+
+.pied-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }

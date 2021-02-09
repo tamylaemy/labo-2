@@ -3,7 +3,7 @@ ANIMATION DE LA SECTION .PRINCIPAL
 ---------------------------------- */
 $columns: 5;
 @for $i from 1 through $columns {
-  .principal h3:nth-of-type(#{$i}) {
+  .principal h2:nth-of-type(#{$i}) {
     animation: anim-#{$i} 1s .5*($i#{s}) both;
   }
 }
