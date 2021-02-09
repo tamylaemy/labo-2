@@ -2,13 +2,13 @@
 Variables
 ------------------------------------------------- */
 /* --------------------------------------------------
-Mixins
+Mixin
 ----------------------------------------------- */
 /* --------------------------------------------------
-Animations
+Animation
 ------------------------------------------------- */
 body {
-  animation: anim-couleur-polygone 35s linear infinite alternate;
+  animation: anim-couleur-polygone 35s ease-in;
 }
 
 @keyframes anim-couleur-polygone {
@@ -30,7 +30,7 @@ body {
 }
 
 #burger {
-  animation: anim-couleur-burger 3s linear 10s infinite alternate;
+  animation: anim-couleur-burger 5s ease-in;
   animation-delay: 5s;
 }
 
@@ -38,13 +38,16 @@ body {
   0% {
     background-color: #efebc5;
   }
-  100% {
+  90% {
     background-color: #f3ccd3;
+  }
+  100% {
+    background-color: #efebc5;
   }
 }
 
 #ville {
-  animation: anim-couleur-ville 3s linear 20s infinite alternate;
+  animation: anim-couleur-ville 5s ease-in;
   animation-delay: 15s;
 }
 
@@ -52,13 +55,16 @@ body {
   0% {
     background-color: #efebc5;
   }
-  100% {
+  90% {
     background-color: #bff8a5;
+  }
+  100% {
+    background-color: #efebc5;
   }
 }
 
 #virus {
-  animation: anim-couleur-virus 3s linear 30s infinite alternate;
+  animation: anim-couleur-virus 5s ease-in;
   animation-delay: 20s;
 }
 
@@ -66,13 +72,16 @@ body {
   0% {
     background-color: #efebc5;
   }
-  100% {
+  90% {
     background-color: #baeef7;
+  }
+  100% {
+    background-color: #efebc5;
   }
 }
 
 #ferme {
-  animation: anim-couleur-ferme 3s linear 40s infinite alternate;
+  animation: anim-couleur-ferme 5s ease-in;
   animation-delay: 30s;
 }
 
@@ -80,8 +89,11 @@ body {
   0% {
     background-color: #efebc5;
   }
-  100% {
+  90% {
     background-color: #f5cea5;
+  }
+  100% {
+    background-color: #efebc5;
   }
 }
 
