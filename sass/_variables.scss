@@ -3,9 +3,13 @@ $couleurs : (
     primaire : $couleur_desktop,
     text:pink,
     pale: #dffad7,
-    primaire_pale : lighten($couleur_desktop, 40%)
+    primaire_pale : lighten($couleur_desktop, 40%),
+    burger_fond : #f3ccd3,
+    ville_fond : #bff8a5,
+    virus_fond : #baeef7,
+    ferme_fond : #f5cea5,
+    commun_fond : #efebc5
     );
-
 
 @function couleur($propriete){
     @return map-get($couleurs, $propriete);

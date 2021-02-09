@@ -1,0 +1,52 @@
+
+body {
+    animation: anim-couleur-polygone 35s linear infinite alternate;
+}
+
+@keyframes anim-couleur-polygone {
+    0%{background-color: couleur(commun_fond);}
+    25%{background-color: couleur(burger_fond);}
+    50%{background-color: couleur(ville_fond);}
+    75%{background-color: couleur(virus_fond);}
+    100%{background-color: couleur(ferme_fond);}
+}
+
+#burger {
+    animation: anim-couleur-burger 3s linear 10s infinite alternate;
+    animation-delay: 5s;
+}
+
+@keyframes anim-couleur-burger {
+    0%{background-color: couleur(commun_fond);}
+    100%{background-color: couleur(burger_fond);}
+}
+
+#ville {
+    animation: anim-couleur-ville 3s linear 20s infinite alternate;
+    animation-delay: 15s;
+}
+
+@keyframes anim-couleur-ville {
+    0%{background-color: couleur(commun_fond);}
+    100%{background-color: couleur(ville_fond);}
+}
+
+#virus {
+    animation: anim-couleur-virus 3s linear 30s infinite alternate;
+    animation-delay: 20s;
+}
+
+@keyframes anim-couleur-virus {
+    0%{background-color: couleur(commun_fond);}
+    100%{background-color: couleur(virus_fond);}
+}
+
+#ferme {
+    animation: anim-couleur-ferme 3s linear 40s infinite alternate;
+    animation-delay: 30s;
+}
+
+@keyframes anim-couleur-ferme {
+    0%{background-color: couleur(commun_fond);}
+    100%{background-color: couleur(ferme_fond);}
+}

@@ -17,13 +17,11 @@
         <nav class="bloc menu"><h4>Menu</h4></nav>
         <sidebar class="bloc annonce1">
            Annonce #1
-          <section>
+          <section class="animation">
               <div id="burger"><img src="https://s2.svgbox.net/illlustrations.svg?ic=burger&color=026df7" width="32" height="32" >Lorem ipsum dolor,  illum quo pariatur ab libero. Lorem ipsum dolor, illum quo pariatur ab libero.Lorem ipsum dolor </div>
               <div id="ville"><img src="https://s2.svgbox.net/illlustrations.svg?ic=building&color=026df7" width="32" height="32">Lorem ipsum dolor,  illum quo pariatur ab libero.</div>
               <div id="virus"><img src="https://s2.svgbox.net/illlustrations.svg?ic=covid-virus&color=026df7" width="32" height="32">Lorem ipsum dolor,  illum quo pariatur ab libero.</div>
               <div id="ferme"><img src="https://s2.svgbox.net/illlustrations.svg?ic=farm&color=026df7" width="32" height="32">Lorem ipsum dolor,  illum quo pariatur ab libero.</div>
-         
-              
             </section>
         </sidebar>
         <!-- sidebar class="bloc annonce2">
@@ -47,60 +45,4 @@
         </footer>
     </section>
 </body>
-<script>
-    let resteDuPolygone = document.getElementsByTagName("body")[0]
-    let burger = document.getElementById('burger')
-    let ville = document.getElementById('ville')
-    let virus = document.getElementById('virus')
-    let ferme = document.getElementById('ferme')
-
-    // Lorsque l'utilisateur survol les annonces, l'arrière plan change en fonction
-    // de la couleur du background color
-    
-    // Annonce du burger
-    burger.addEventListener('mouseenter', function(){
-            burger.style.backgroundColor = "#f3ccd3"
-            resteDuPolygone.style.backgroundColor = "#f3ccd3"
-    })
-
-    burger.addEventListener('mouseleave', function(){
-            burger.style.backgroundColor = "#efebc5"
-            resteDuPolygone.style.backgroundColor = "#fff"
-    })
-
-    // Annonce de la ville
-    ville.addEventListener('mouseenter', function(){
-            ville.style.backgroundColor = "#cff5be"
-            resteDuPolygone.style.backgroundColor = "#cff5be"
-    })
-
-    ville.addEventListener('mouseleave', function(){
-            ville.style.backgroundColor = "#efebc5"
-            resteDuPolygone.style.backgroundColor = "#fff"
-    })
-
-    // Annonce du virus
-    virus.addEventListener('mouseenter', function(){
-            virus.style.backgroundColor = "#baeef7"
-            resteDuPolygone.style.backgroundColor = "#baeef7"
-    })
-
-    virus.addEventListener('mouseleave', function(){
-            virus.style.backgroundColor = "#efebc5"
-            resteDuPolygone.style.backgroundColor = "#fff"
-    })
-
-    // Annonce de la ferme
-    ferme.addEventListener('mouseenter', function(){
-            ferme.style.backgroundColor = "#f5cea5"
-            resteDuPolygone.style.backgroundColor = "#f5cea5"
-    })
-
-    ferme.addEventListener('mouseleave', function(){
-            ferme.style.backgroundColor = "#efebc5"
-            resteDuPolygone.style.backgroundColor = "#fff"
-    })
-
-
-</script>
 </html>
