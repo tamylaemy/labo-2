@@ -8,29 +8,19 @@ $columns: 5;
   }
 }
 
-@keyframes anim-1 {
-    0%{transform: translateY(-500px);}
-    100%{transform: translate(0);}
-}
+$tabTranslate: (
+    1:translateY(-500px),
+    2:translateY(-600px),
+    3:translateX(-500px),
+    4:translateY(600px),
+    5:translateY(500px)
+);
 
-@keyframes anim-2 {
-    0%{transform: translateY(-500px);}
-    100%{transform: translate(0);}
-}
-
-@keyframes anim-3 {
-    0%{transform: translateY(-500px);}
-    100%{transform: translate(0);}
-}
-
-@keyframes anim-4 {
-    0%{transform: translateY(-500px);}
-    100%{transform: translate(0);}
-}
-
-@keyframes anim-5 {
-    0%{transform: translateY(500px);}
-    100%{transform: translate(0);}
+@each $i ,$elem in $tabTranslate {
+    @keyframes anim-#{$i}{
+        0%{transform: $elem;}
+        100%{transform: translate(0);}
+    }
 }
 
 /* ----------------------------------------------
@@ -39,7 +29,7 @@ ANIMATION DE LA PAGE D'ACCEUIL ( ANNONCE + BODY )
 
 // animation couleur du reste du fond (synchro avec les animations d'annonces)
 body {
-    animation: anim-couleur-polygone 35s ease-in infinite;
+    animation: anim-couleur-polygone 35s ease-in;
 }
 
 @keyframes anim-couleur-polygone {

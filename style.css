@@ -41,7 +41,7 @@ ANIMATION DE LA SECTION .PRINCIPAL
 
 @keyframes anim-2 {
   0% {
-    transform: translateY(-500px);
+    transform: translateY(-600px);
   }
   100% {
     transform: translate(0);
@@ -50,7 +50,7 @@ ANIMATION DE LA SECTION .PRINCIPAL
 
 @keyframes anim-3 {
   0% {
-    transform: translateY(-500px);
+    transform: translateX(-500px);
   }
   100% {
     transform: translate(0);
@@ -59,7 +59,7 @@ ANIMATION DE LA SECTION .PRINCIPAL
 
 @keyframes anim-4 {
   0% {
-    transform: translateY(-500px);
+    transform: translateY(600px);
   }
   100% {
     transform: translate(0);
@@ -79,7 +79,7 @@ ANIMATION DE LA SECTION .PRINCIPAL
 ANIMATION DE LA PAGE D'ACCEUIL ( ANNONCE + BODY )
 ------------------------------------------------- */
 body {
-  animation: anim-couleur-polygone 35s ease-in infinite;
+  animation: anim-couleur-polygone 35s ease-in;
 }
 
 @keyframes anim-couleur-polygone {
