@@ -2,8 +2,8 @@
 Variables
 ------------------------------------------------- */
 /* --------------------------------------------------
-Mixin
------------------------------------------------ */
+Mixins
+------------------------------------------------- */
 /* --------------------------------------------------
 Animation
 ------------------------------------------------- */
@@ -152,7 +152,7 @@ ANIMATION DE LA PAGE D'ACCEUIL ( ANNONCE + BODY )
 }
 
 /* --------------------------------------------------
-Layo
+Layout
 ------------------------------------------------- */
 * {
   margin: 0;
@@ -276,10 +276,37 @@ p {
   margin: 20px;
 }
 
-.annonce1 div {
-  font-size: .4em;
+.annonce1 h2 {
+  font-size: .7em;
   display: flex;
-  align-items: center;
+  justify-content: center;
+}
+
+.annonce1 div {
+  display: flex;
+  justify-content: center;
+}
+
+.annonce1 p {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .annonce1 h2 {
+    font-size: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    padding-bottom: .6em;
+  }
+  .annonce1 div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .annonce1 p {
+    display: flex;
+    font-size: .4em;
+  }
 }
 
 /* .annonce2{
@@ -300,21 +327,27 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 5px solid #5e6e81;
   color: #5e6e81;
-  border-radius: 50%;
 }
 
-.principal h2 {
-  padding: 1.3rem 0 1.3rem 0;
+@media (min-width: 1000px) {
+  .principal h2 {
+    padding: 1.3rem 0 1.3rem 0;
+  }
 }
 
-.pied-page {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+.pied-page h5 {
+  padding-top: 0.5em;
+}
+
+@media (min-width: 1000px) {
+  .pied-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
 }
 
 /* --------------------------------------------------

@@ -15,9 +15,6 @@ body {
 
 body::after {
     content : "";
-    // clip-path: polygon(100% 0, 45% 15%, 8% 50%, 45% 85%, 100% 100%);
-    // clip-path: polygon(100% 0, 60% 32%, 8% 50%, 60% 69%, 100% 100%);
-    // clip-path: polygon(20% 55%, 100% 0 , 100% 100% );
     clip-path: polygon(50% 0, 100% 50% , 50% 100% , 0 50%);
     //background-color: rgb(43, 71, 233);
     background-color: couleur(primaire);
@@ -115,16 +112,43 @@ p {
     box-shadow: 7px 3px 11px 4px #757472;
     padding: 42px;
     margin: 20px;
+    
+    h2 {
+        font-size: .7em;
+        display: flex;
+        justify-content: center;
+    }
+    
     div{
-        font-size: .4em;
         display:flex;
-        align-items: center;
-        }
+        justify-content: center;
     }
 
-    @include desktop {
-        
+    p {
+        display: none;
     }
+
+    
+    @include desktop { 
+        h2 {
+            font-size: 3rem;
+            display: flex;
+            justify-content: flex-start;
+            padding-bottom: .6em;
+        }
+
+        div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+            p {
+            display: flex; 
+            font-size: .4em;
+            }
+    }
+}
+
 
 /* .annonce2{
     padding: 42px;
@@ -145,18 +169,25 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 5px solid #5e6e81;
     color: #5e6e81;
-    border-radius: 50%;
-    h2 {
+
+    @include desktop {
+     h2 {
         padding: 1.3rem 0 1.3rem 0;
+     }
     }
 }
 
 .pied-page{
+    h5 {
+    padding-top: 0.5em;
+    }
+
+    @include desktop {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 0.5em;
     padding-right: 0.5em;
+    }
 }
